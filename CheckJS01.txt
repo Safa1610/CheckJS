@@ -1,0 +1,122 @@
+SOLUTION 1
+
+function minMax(arr) {
+    let x = arr.length
+    var min = arr[0];
+    var max = arr[0];
+  for (let index = 1; index < x; index++) {
+        if (arr[index] < min) { min = arr[index]; }
+    if (arr[index] > max) { max = arr[index];}
+  }
+    let tab = [min,max];
+    return tab;
+}
+
+
+SOLUTION 2
+
+function sumOfCubes(arr) {
+	let x = arr.length
+	let sum = 0;
+  for (let index = 0; index < x; index++) {
+    sum += arr[index]** 3;
+  }
+	return sum;
+}
+
+
+SOLUTION 3
+
+function filterArray(arr) {
+	let x = arr.length;
+	let tab=[];
+  for (let index = 0; index < x; index++) {
+    if (typeof arr[index] === "number")  {
+        if (arr[index] >= 0)  {
+            tab.push(arr[index]);
+        }
+    }
+  }
+	return tab;
+}
+
+
+SOLUTION 4
+
+function isPalindrome(num) {
+  for (let i = 0; i < num.length / 2; i++) {
+      if (num[i] != num[num.length - i - 1]) {
+          return false;
+      }
+  }
+  return true;
+}
+
+
+SOLUTION 5
+
+function isSpecialArray(arr) {
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 !== i % 2) return false;
+    }
+    return true;
+  }
+
+
+SOLUTION 6
+
+function countTrue(arr) {
+    let x = arr.length;
+    let num = 0;
+	for (let index = 0; index < x; index++) {
+        if (arr[index] == true) { num++ }
+    }
+    return num;
+}
+
+
+SOLUTION 7
+
+function objectToArray(obj) {
+    var result = Object.entries(obj);
+    return result;
+}
+
+
+SOLUTION 8
+
+function arrayOfMultiples (num, length) {
+    let tab=[];
+    let y = num;
+    tab.push(y);
+	for (let index = 1; index < length; index++) {
+        y = y + num
+        tab.push(y);
+    }
+    return tab
+}
+
+
+SOLUTION 9
+
+function marathonDistance(d) {
+	let x = d.length;
+    let sum = 0;
+    for (let index = 0; index < x; index++) {
+        sum += Math.abs(d[index]);
+    }
+    if (sum == 25) { return true}
+    else { return false }
+}
+
+
+SOLUTION 10
+
+function squareDigits(n) {
+        let res = ""
+        const x = n.toString()
+        for(let i = 0 ;i < x.length;i++){
+            res += Math.pow(Number(x[i]),2)
+        }
+        return Number(res)
+    }

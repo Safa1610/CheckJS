@@ -1,0 +1,115 @@
+String Manipulation Functions:
+
+Function 1
+
+function reverseString(str) {
+  var Revstr = "";
+  for (let i = str.length -1; i >= 0; i--) {
+    Revstr += str[i];
+  }
+  return Revstr
+}
+
+
+Function 2
+
+function CountCharacters(str) {
+  var nbrcar = 0;
+  for (let i=0; i <str.length;i++) {
+    if (str[i] !==" ") { nbrcar++}
+  }
+  return nbrcar
+}
+
+
+Function 3
+
+function MajFirstLet(str) {
+  let words = str.split(" ");
+  let sentc ="";
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    sentc += words[i] + " "
+  }
+  return sentc
+}
+
+Array Functions:
+
+Function 1
+
+function reverseString(str) {
+  var Revstr = "";
+  for (let i = str.length -1; i >= 0; i--) {
+    Revstr += str[i];
+  }
+  return Revstr
+}
+
+
+Function 2
+
+function SumofArray(arr) {
+	let x = arr.length;
+    let sum = 0;
+    for (let index = 0; index < x; index++) {
+        sum += arr[index];
+    }
+    return sum
+}
+
+
+Function 3
+
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+      let key = arr[i];
+      let j = i - 1;
+      while (j >= 0 && arr[j] > key) {
+          arr[j + 1] = arr[j];
+          j = j - 1;
+      }
+      arr[j + 1] = key;
+  }
+  return arr
+}
+
+
+Mathematical Functions:
+
+Function 1
+
+function factorial(n) { 
+  let numb = 1; 
+  if(n === 0)
+      return 1;
+  for (let i = 2; i <= n; i++) 
+    numb = numb * i; 
+  return numb; 
+}
+
+
+Function 2
+
+function PrimeNum(num) {
+  if (num <= 1) return false; 
+  for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+          return false; 
+      }
+  }
+  return true; 
+}
+
+
+Function 3
+
+function FibonacciSq(number) {
+  let n1 = 0, n2 = 1, nextTerm;
+  for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+  }
+}
